@@ -1,0 +1,100 @@
+<model type = "Objects::AMC::Model" name = "Equal absorb chain for 'Equal absorb chain for 'Absorb Markov Chain of l3''">
+	<node type = "Objects::AMC::Top" name = "begin"></node>
+	<node type = "Objects::AMC::Top" name = "end"></node>
+	<node type = "Objects::AMC::Top" name = "t0"></node>
+	<node type = "Objects::AMC::Top" name = "t1"></node>
+	<node type = "Objects::AMC::Top" name = "t2"></node>
+	<node type = "Objects::AMC::Top" name = "t3"></node>
+	<node type = "Objects::AMC::Top" name = "t4"></node>
+	<node type = "Objects::AMC::Top" name = "t5"></node>
+	<node type = "Objects::AMC::Top" name = "t6"></node>
+	<node type = "Objects::AMC::Top" name = "t7"></node>
+	<node type = "Objects::AMC::Top" name = "t8"></node>
+	<node type = "Objects::AMC::Top" name = "t9"></node>
+	<node type = "Objects::AMC::Top" name = "t10"></node>
+	<node type = "Objects::AMC::Top" name = "t11"></node>
+	<node type = "Objects::AMC::Top" name = "t12"></node>
+	<node type = "Objects::AMC::Top" name = "t13"></node>
+	<node type = "Objects::AMC::Top" name = "t14"></node>
+	<node type = "Objects::AMC::Top" name = "t15"></node>	
+	<node type = "Objects::AMC::Top" name = "t15a"></node>
+	<node type = "Objects::AMC::Top" name = "te"></node>
+	<node type = "Objects::AMC::Top" name = "td"></node>
+	<node type = "Objects::AMC::Top" name = "tf"></node>	
+	<node type = "Objects::AMC::Top" name = "tf1"></node>
+	<node type = "Objects::AMC::Top" name = "tc"></node>
+	<node type = "Objects::AMC::Top" name = "t16"></node>
+	<node type = "Objects::AMC::Top" name = "t17"></node>
+	<node type = "Objects::AMC::Top" name = "t18"></node>
+	<node type = "Objects::AMC::Top" name = "t19"></node>	
+	<node type = "Objects::AMC::Top" name = "t20"></node>
+	<node type = "Objects::AMC::Top" name = "t21"></node>
+	<node type = "Objects::AMC::Top" name = "t22"></node>
+	<node type = "Objects::AMC::Top" name = "t23"></node>
+	<node type = "Objects::AMC::Top" name = "t24"></node>
+	<node type = "Objects::AMC::Top" name = "t25"></node>
+	<node type = "Objects::AMC::Top" name = "t26"></node>
+	<node type = "Objects::AMC::Top" name = "t27"></node>
+	<node type = "Objects::AMC::Top" name = "t28"></node>
+	<node type = "Objects::AMC::Top" name = "t29"></node>
+	<node type = "Objects::AMC::Top" name = "t30"></node>
+	<node type = "Objects::AMC::Top" name = "t31"></node>
+	<node type = "Objects::AMC::Top" name = "t32"></node>	
+	<node type = "Objects::AMC::Top" name = "te2"></node>
+	<node type = "Objects::AMC::Top" name = "td2"></node>
+	<link type = "Objects::AMC::Link" name = "begin-->t0" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "begin" dest = "t0"></link>
+	<link type = "Objects::AMC::Link" name = "t0-->end" probability = "0.01" intensity = "2.51" deviation = "0.0" source = "t0" dest = "end"></link>
+	<link type = "Objects::AMC::Link" name = "t0-->t1" probability = "0.99" intensity = "16.99" deviation = "0.0" source = "t0" dest = "t1"></link>	
+	<link type = "Objects::AMC::Link" name = "t1-->t2" probability = "1.0" intensity = "5.12" deviation = "0.0" source = "t1" dest = "t2"></link>
+	<link type = "Objects::AMC::Link" name = "t2-->t3" probability = "0.25" intensity = "1.05" deviation = "0.0" source = "t2" dest = "t3"></link>	
+	<link type = "Objects::AMC::Link" name = "t3-->t15" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "t3" dest = "t15"></link>	
+	<link type = "Objects::AMC::Link" name = "t2-->t4" probability = "0.75" intensity = "10.28" deviation = "0.0" source = "t2" dest = "t4"></link>	
+	<link type = "Objects::AMC::Link" name = "t4-->t5" probability = "0.33" intensity = "4.54" deviation = "0.0" source = "t4" dest = "t5"></link>	
+	<link type = "Objects::AMC::Link" name = "t5-->td" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "t5" dest = "td"></link>	
+	<link type = "Objects::AMC::Link" name = "t4-->t6" probability = "0.67" intensity = "9.99" deviation = "0.0" source = "t4" dest = "t6"></link>	
+	<link type = "Objects::AMC::Link" name = "t6-->t7" probability = "0.5" intensity = "0.0" deviation = "0.0" source = "t6" dest = "t7"></link>	
+	<link type = "Objects::AMC::Link" name = "t7-->t8" probability = "1.0" intensity = "22.04" deviation = "0.0" source = "t7" dest = "t8"></link>	
+	<link type = "Objects::AMC::Link" name = "t8-->t9" probability = "0.97" intensity = "6.19" deviation = "0.0" source = "t8" dest = "t9"></link>	
+	<link type = "Objects::AMC::Link" name = "t9-->t8" probability = "1.0" intensity = "18.23" deviation = "0.0" source = "t9" dest = "t8"></link>	
+	<link type = "Objects::AMC::Link" name = "t8-->t10" probability = "0.03" intensity = "6.19" deviation = "0.0" source = "t8" dest = "t10"></link>	
+	<link type = "Objects::AMC::Link" name = "t10-->te" probability = "1.0" intensity = "61.27" deviation = "0.0" source = "t10" dest = "te"></link>	
+	<link type = "Objects::AMC::Link" name = "t6-->t11" probability = "0.5" intensity = "23.46" deviation = "0.0" source = "t6" dest = "t11"></link>	
+	<link type = "Objects::AMC::Link" name = "t11-->t12" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "t11" dest = "t12"></link>	
+	<link type = "Objects::AMC::Link" name = "t12-->t13" probability = "0.92" intensity = "2.10" deviation = "0.0" source = "t12" dest = "t13"></link>	
+	<link type = "Objects::AMC::Link" name = "t13-->t12" probability = "1.0" intensity = "10.70" deviation = "0.0" source = "t13" dest = "t12"></link>	
+	<link type = "Objects::AMC::Link" name = "t12-->t14" probability = "0.08" intensity = "2.10" deviation = "0.0" source = "t12" dest = "t14"></link>	
+	<link type = "Objects::AMC::Link" name = "t14-->te" probability = "1.0" intensity = "56.84" deviation = "0.0" source = "t14" dest = "te"></link>	
+	<link type = "Objects::AMC::Link" name = "te-->td" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "te" dest = "td"></link>	
+	<link type = "Objects::AMC::Link" name = "td-->15" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "td" dest = "t15"></link>	
+	<link type = "Objects::AMC::Link" name = "t15-->tf" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "t15" dest = "tf"></link>	
+	<link type = "Objects::AMC::Link" name = "tf-->t15a" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "tf" dest = "t15a"></link>	
+	<link type = "Objects::AMC::Link" name = "t15a-->tf1" probability = "0.26" intensity = "2.16" deviation = "0.0" source = "t15a" dest = "tf1"></link>
+	<link type = "Objects::AMC::Link" name = "tf1-->tc" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "tf1" dest = "tc"></link>	
+	<link type = "Objects::AMC::Link" name = "tc-->t0" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "tc" dest = "t0"></link>
+	
+	<link type = "Objects::AMC::Link" name = "t15a-->t16" probability = "0.74" intensity = "2.16" deviation = "0.0" source = "t15a" dest = "t16"></link>	
+	<link type = "Objects::AMC::Link" name = "t16-->t17" probability = "1.0" intensity = "19.23" deviation = "0.0" source = "t16" dest = "t17"></link>
+	<link type = "Objects::AMC::Link" name = "t17-->t18" probability = "0.25" intensity = "1.11" deviation = "0.0" source = "t17" dest = "t18"></link>	
+	<link type = "Objects::AMC::Link" name = "t18-->t30" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "t18" dest = "t30"></link>	
+	<link type = "Objects::AMC::Link" name = "t17-->t19" probability = "0.75" intensity = "10.26" deviation = "0.0" source = "t17" dest = "t19"></link>	
+	<link type = "Objects::AMC::Link" name = "t19-->t20" probability = "0.33" intensity = "4.12" deviation = "0.0" source = "t19" dest = "t20"></link>	
+	<link type = "Objects::AMC::Link" name = "t20-->td2" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "t20" dest = "td2"></link>	
+	<link type = "Objects::AMC::Link" name = "t19-->t21" probability = "0.67" intensity = "9.66" deviation = "0.0" source = "t19" dest = "t21"></link>	
+	<link type = "Objects::AMC::Link" name = "t21-->t22" probability = "0.5" intensity = "0.0" deviation = "0.0" source = "t21" dest = "t22"></link>	
+	<link type = "Objects::AMC::Link" name = "t22-->t23" probability = "1.0" intensity = "21.91" deviation = "0.0" source = "t22" dest = "t23"></link>	
+	<link type = "Objects::AMC::Link" name = "t23-->t24" probability = "0.97" intensity = "6.19" deviation = "0.0" source = "t23" dest = "t24"></link>	
+	<link type = "Objects::AMC::Link" name = "t24-->t23" probability = "1.0" intensity = "18.23" deviation = "0.0" source = "t24" dest = "t23"></link>	
+	<link type = "Objects::AMC::Link" name = "t23-->t25" probability = "0.03" intensity = "6.19" deviation = "0.0" source = "t23" dest = "t25"></link>	
+	<link type = "Objects::AMC::Link" name = "t25-->te2" probability = "1.0" intensity = "60.24" deviation = "0.0" source = "t25" dest = "te2"></link>	
+	<link type = "Objects::AMC::Link" name = "t21-->t26" probability = "0.5" intensity = "0.0" deviation = "0.0" source = "t21" dest = "t26"></link>	
+	<link type = "Objects::AMC::Link" name = "t26-->t27" probability = "1.0" intensity = "22.51" deviation = "0.0" source = "t26" dest = "t27"></link>	
+	<link type = "Objects::AMC::Link" name = "t27-->t28" probability = "0.92" intensity = "2.10" deviation = "0.0" source = "t27" dest = "t28"></link>	
+	<link type = "Objects::AMC::Link" name = "t28-->t27" probability = "1.0" intensity = "10.70" deviation = "0.0" source = "t28" dest = "t27"></link>	
+	<link type = "Objects::AMC::Link" name = "t27-->t29" probability = "0.08" intensity = "2.10" deviation = "0.0" source = "t27" dest = "t29"></link>	
+	<link type = "Objects::AMC::Link" name = "t29-->te2" probability = "1.0" intensity = "56.76" deviation = "0.0" source = "t29" dest = "te2"></link>	
+	<link type = "Objects::AMC::Link" name = "te2-->td2" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "te2" dest = "td2"></link>	
+	<link type = "Objects::AMC::Link" name = "td2-->30" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "td2" dest = "t30"></link>	
+	<link type = "Objects::AMC::Link" name = "t30-->t31" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "t30" dest = "t31"></link>	
+	<link type = "Objects::AMC::Link" name = "t31-->t32" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "t31" dest = "t32"></link>	
+	<link type = "Objects::AMC::Link" name = "t32-->t15a" probability = "1.0" intensity = "0.0" deviation = "0.0" source = "t32" dest = "t15a"></link>	
+</model>

@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+<h1>CSA</h1>
+
+<script type="text/javascript" language="javascript">
+  const add_in   = true;
+  const add_out  = false;
+	const col_number = 4;
+	
+  function getDomFromFile(filename) {
+   // Load XML
+   var xml;
+   if (typeof ActiveXObject != 'undefined') {// IE
+    xml = new ActiveXObject("Microsoft.XMLDOM");
+    xml.async = false;
+    xml.load(filename);
+   }
+   else { // others
+    var myXMLHTTPRequest = new XMLHttpRequest();
+    myXMLHTTPRequest.open("GET", filename, false);
+    myXMLHTTPRequest.send(null);
+    xml = myXMLHTTPRequest.responseXML;
+        
+   }
+   return xml;
+  }
+  
+  function getDomFromXml(xml) {
+   var dom;
+   if (typeof ActiveXObject != 'undefined') {
+    dom = new ActiveXObject("Microsoft.XMLDOM");
+    dom.async = false;
+    dom.loadXML(xml);
+   }
+   else {
+    parser = new DOMParser();
+    dom = parser.parseFromString(xml, "text/xml");      
+   }
+   return dom;
+  }
+
+
+  function xslt(xmlDoc,xslDoc) {
+   var transform;
+   
+   if (typeof ActiveXObject != 'undefined') { //IE
+    transform = xmlDoc.transformNode(xslDoc);
+   }
+   else { //mozilla
+    var xsl = new XSLTProcessor();
+ 
+    xsl.importStylesheet(xslDoc);
+
+    var fragment=xsl.transformToFragment(xmlDoc, document);
+    if( fragment.childNodes.length>0 )
+      transform = fragment.childNodes[0].innerHTML;
+    else
+     return "error during transformation";
+   }
+   return transform;
+  }
+
+   var IN  = getDomFromFile("csa.xsl")
+   var xmldoc = getDomFromFile("model.xml");
+   document.write(xslt(xmldoc, IN))
+</script>
+
+</html>
