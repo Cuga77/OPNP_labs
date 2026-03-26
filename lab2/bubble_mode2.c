@@ -1,54 +1,73 @@
-/* 1 */ // Программа: Сортировка пузырьком (Вариант 5)
-/* 2 */ // Режим 2: Детальное измерение
-/* 3 */ #include <stdio.h>
-/* 4 */ #include <stdlib.h>
-/* 5 */ #include <stdbool.h>
-/* 6 */ #include "sampler.h"
-/* 7 */ 
-/* 8 */ #define MAX 100
-/* 9 */ 
-/* 10 */ typedef double ary[MAX];
-/* 11 */ 
-/* 12 */ void swap(double *p, double *q) {
-/* 13 */     double hold = *p;
-/* 14 */     *p = *q;
-/* 15 */     *q = hold;
-/* 16 */ }
-/* 17 */ 
-/* 18 */ void sort(ary a, int n) {
-/* 19 */     SAMPLE; // КТ: Вход в функцию
-/* 20 */     bool no_change;
-/* 21 */     int j;
-/* 22 */     SAMPLE; // КТ: вход в do-while
-/* 23 */     do {
-/* 24 */         SAMPLE; // КТ: Цикл do-while
-/* 25 */         no_change = true;
-/* 26 */         SAMPLE; // КТ: вход в for
-/* 27 */         for (j = 0; j < n - 1; j++) {
-/* 28 */             SAMPLE; // КТ: Внутренний цикл for
-/* 29 */             SAMPLE; // КТ: вход в if
-/* 30 */             if (a[j] > a[j + 1]) {
-/* 31 */                 SAMPLE; // КТ: Ветвление if
-/* 32 */                 swap(&a[j], &a[j + 1]);
-/* 33 */                 SAMPLE; // КТ: swap
-/* 34 */                 no_change = false;
-/* 35 */                 SAMPLE; // КТ: выход if
-/* 36 */             }
-/* 37 */             SAMPLE; // КТ: время for
-/* 38 */         }
-/* 39 */             SAMPLE; // КТ: время do-while
-/* 40 */     } while (!no_change);
-/* 41 */     SAMPLE; // КТ: Выход из функции
-/* 42 */ }
-/* 43 */ 
-/* 44 */ int main(int argc, char **argv) {
-/* 45 */     sampler_init(&argc, argv);
-/* 46 */     ary x;
-/* 47 */     int n = MAX;
-/* 48 */     srand(42);
-/* 49 */     for (int k = 0; k < n; k++) {
-/* 50 */         x[k] = (double)(rand() % 10000);
-/* 51 */     }
-/* 52 */     sort(x, n);
-/* 53 */     return 0;
+/* 1 */ #include <stdio.h>
+/* 2 */ #include <stdlib.h>
+/* 3 */ #include <stdbool.h>
+/* 4 */ #include "sampler.h"
+/* 5 */ 
+/* 6 */ #define MAX 100
+/* 7 */ typedef double ary[MAX];
+/* 8 */ 
+/* 9 */ void sort1(ary a, int n) {
+/* 10 */     int i, j;
+/* 11 */     double hold;
+/* 12 */     SAMPLE; 
+/* 13 */     for (i = 0; i < n - 1; i++) {
+/* 14 */         SAMPLE; 
+/* 15 */         for (j = i + 1; j < n; j++) {
+/* 16 */             SAMPLE; 
+/* 17 */             if (a[i] > a[j]) {
+/* 18 */                 SAMPLE; 
+/* 19 */                 hold = a[i];
+/* 20 */                 a[i] = a[j];
+/* 21 */                 a[j] = hold;
+/* 22 */             }
+/* 23 */             SAMPLE; 
+/* 24 */         }
+/* 25 */         SAMPLE; 
+/* 26 */     }
+/* 27 */     SAMPLE; 
+/* 28 */ }
+/* 29 */ 
+/* 30 */ void swap(double *p, double *q) {
+/* 31 */     double hold = *p;
+/* 32 */     *p = *q;
+/* 33 */     *q = hold;
+/* 34 */ }
+/* 35 */ 
+/* 36 */ void sort2(ary a, int n) {
+/* 37 */     bool no_change;
+/* 38 */     int j;
+/* 39 */     SAMPLE; 
+/* 40 */     do {
+/* 41 */         no_change = true;
+/* 42 */         SAMPLE; 
+/* 43 */         for (j = 0; j < n - 1; j++) {
+/* 44 */             SAMPLE; 
+/* 45 */             if (a[j] > a[j + 1]) {
+/* 46 */                 SAMPLE; 
+/* 47 */                 swap(&a[j], &a[j + 1]);
+/* 48 */                 no_change = false;
+/* 49 */             }
+/* 50 */             SAMPLE; 
+/* 51 */         }
+/* 52 */         SAMPLE; 
+/* 53 */     } while (!no_change);
 /* 54 */ }
+/* 55 */ 
+/* 56 */ int main(int argc, char **argv) {
+/* 57 */     sampler_init(&argc, argv);
+/* 58 */     ary x1, x2;
+/* 59 */     int n = MAX;
+/* 60 */     srand(42);
+/* 61 */     for (int k = 0; k < n; k++) {
+/* 62 */         x1[k] = (double)(rand() % 10000);
+/* 63 */         x2[k] = x1[k];
+/* 64 */     }
+/* 65 */     
+/* 66 */     SAMPLE; 
+/* 67 */     sort1(x1, n);
+/* 68 */     SAMPLE; 
+/* 69 */     sort2(x2, n);
+/* 70 */     SAMPLE; 
+/* 71 */     
+/* 72 */     return 0;
+/* 73 */ }

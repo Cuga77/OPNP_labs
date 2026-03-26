@@ -3,6 +3,7 @@
 #
 # $Id: demo_fm.rb,v 1.7 2006/06/06 08:29:11 pac Exp $
 #
+require "matrix"
 
 module Methods
 
@@ -21,11 +22,9 @@ module Methods
          ICON        = GUI::Icon::METHOD_ICON
 
          def execute(model)
-            d, fm, nl = calculate(model)
-            # Вычисление среднего времени возврата
+            d, fm, nl = self.class.calculate(model)
             t_mean = 0.0
             nl.row(0).collect { |i| t_mean += i }
-            # Диалог
             if GUI::Dialogs.confirm("Fundamental Matrix: \n\n#{fm}\n\n Mean time execution: #{t_mean}\n\n Deviation: #{d[0, 0]}\n\n  Save?", "Result")
                filepath = FXFileDialog.getSaveFilename(GUI::MainWindow.instance, "Select file...", ".", "Text (*.txt)")
                return if filepath.empty?
@@ -37,17 +36,14 @@ module Methods
             end
          end # execute
 
-         # Дисперсия
          def DemonstrationFM.deviation(model)
-            dev = calculate(model).first[0,0]
+            dev = self.class.calculate(model).first[0,0]
             return (dev < 0.00001 ? 0.0 : dev)
          end # deviation
 
-      private
-      
          def self.calculate(model)
             # Calculating probability matrix
-            prob_matrix = []
+            p = []
             model.nodes.each do |n1|
                row = []
                model.nodes.each_with_index do |n2, idx|
@@ -56,14 +52,15 @@ module Methods
                end
                p << row
             end
-            # Подматрица переходов из невозвр. сост. в поглощающие
             q = p.clone
             q.pop
             q.each { |row| row.pop }
             q.each_index { |i| q[i].collect! { |x| x*(-1) }; q[i][i] += 1.0 }
-            # Фундаментальная матрица
-            fm = Matrix.rows(q).inverse
-            # Вектор ресурсов
+            if q.empty?
+               fm = Matrix[]
+            else
+               fm = Matrix.rows(q).inverse
+            end
             l = []
             l_v = []
             model.nodes.each_with_index do |n, i|
@@ -75,13 +72,10 @@ module Methods
             end
             l.pop
             l_v.pop
-            # Диагональная матрица, составленная из вектора расурсов
             l_dg = Matrix.rows(l) 
-            # Квадрат элементов вектора ресурсов
             l_v  = Matrix.columns([l_v])
             l_sq  = l_v.collect { |x| x * x }
             fml_sq = (fm * l_v).collect { |x| x * x }
-            # Вектор дисперсии           
             d = fm * (l_dg * fm * l_v * 2 - l_sq) - fml_sq
             
             return [d, fm, fm * l_dg]

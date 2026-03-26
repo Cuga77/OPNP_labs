@@ -4,6 +4,8 @@
 # $Id: csa.rb,v 1.7 2006/01/22 12:41:18 ldm Exp $
 #
 
+$LOAD_PATH << Dir.pwd
+
 require "gui/main_window"
 require "methods/methods"
 

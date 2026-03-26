@@ -6,3 +6,26 @@ __pycache__/
 *.png
 *.dot
 *.txt
+*.log
+*.pdf
+*.html
+*.json
+*.csv
+*.zip
+*.tar.gz
+# Файлы конфигурации и секретные ключи
+*.env
+*.key
+*.pem
+*.cfg
+*.ini
+*.yaml
+*.yml
+*.secret
+# Логи и временные файлы
+*.csa3
+*.exe
+*.out
+lab2/bubble_mode1
+lab2/bubble_mode2
+lab2/bubble_mode2_opt
