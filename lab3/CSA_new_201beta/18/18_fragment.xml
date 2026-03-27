@@ -1,0 +1,10 @@
+<model type="Objects::AMC::Model" name="Romberg_Fragment_For">
+      <node type="Objects::AMC::Top" name="t36"></node>
+      <node type="Objects::AMC::Top" name="t38"></node>
+      <node type="Objects::AMC::Top" name="t42"></node>
+      <node type="Objects::AMC::Top" name="t45"></node>
+      <link type="Objects::AMC::Link" name="t36-->t38" probability="1.0" intensity="3.000" deviation="0.0" source="t36" dest="t38"></link>
+      <link type="Objects::AMC::Link" name="t38-->t42" probability="1.0" intensity="6.347" deviation="0.0" source="t38" dest="t42"></link>
+      <link type="Objects::AMC::Link" name="t42-->t45" probability="0.1613" intensity="58.885" deviation="0.0" source="t42" dest="t45"></link>
+      <link type="Objects::AMC::Link" name="t42-->t38" probability="0.8387" intensity="3.500" deviation="0.0" source="t42" dest="t38"></link>
+</model>

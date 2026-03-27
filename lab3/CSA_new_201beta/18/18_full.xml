@@ -1,0 +1,44 @@
+<model type="Objects::AMC::Model" name="Romberg_Full">
+      <node type="Objects::AMC::Top" name="t12"></node>
+      <node type="Objects::AMC::Top" name="t26"></node>
+      <node type="Objects::AMC::Top" name="t28"></node>
+      <node type="Objects::AMC::Top" name="t36"></node>
+      <node type="Objects::AMC::Top" name="t38"></node>
+      <node type="Objects::AMC::Top" name="t42"></node>
+      <node type="Objects::AMC::Top" name="t45"></node>
+      <node type="Objects::AMC::Top" name="t50"></node>
+      <node type="Objects::AMC::Top" name="t52"></node>
+      <node type="Objects::AMC::Top" name="t57"></node>
+      <node type="Objects::AMC::Top" name="t60"></node>
+      <node type="Objects::AMC::Top" name="t62"></node>
+      <node type="Objects::AMC::Top" name="t64"></node>
+      <node type="Objects::AMC::Top" name="t67"></node>
+      <node type="Objects::AMC::Top" name="t69"></node>
+      <node type="Objects::AMC::Top" name="t71"></node>
+      <node type="Objects::AMC::Top" name="t73"></node>
+      <node type="Objects::AMC::Top" name="t75"></node>
+      <node type="Objects::AMC::Top" name="t78"></node>
+      <link type="Objects::AMC::Link" name="t12-->t26" probability="1.0" intensity="216.221" deviation="0.0" source="t12" dest="t26"></link>
+      <link type="Objects::AMC::Link" name="t26-->t28" probability="1.0" intensity="3.500" deviation="0.0" source="t26" dest="t28"></link>
+      <link type="Objects::AMC::Link" name="t28-->t36" probability="1.0" intensity="30.901" deviation="0.0" source="t28" dest="t36"></link>
+      <link type="Objects::AMC::Link" name="t36-->t38" probability="1.0" intensity="3.000" deviation="0.0" source="t36" dest="t38"></link>
+      <link type="Objects::AMC::Link" name="t38-->t42" probability="1.0" intensity="6.347" deviation="0.0" source="t38" dest="t42"></link>
+      <link type="Objects::AMC::Link" name="t42-->t45" probability="0.1613" intensity="58.885" deviation="0.0" source="t42" dest="t45"></link>
+      <link type="Objects::AMC::Link" name="t42-->t38" probability="0.8387" intensity="3.500" deviation="0.0" source="t42" dest="t38"></link>
+      <link type="Objects::AMC::Link" name="t45-->t50" probability="1.0" intensity="3.998" deviation="0.0" source="t45" dest="t50"></link>
+      <link type="Objects::AMC::Link" name="t50-->t52" probability="1.0" intensity="55.204" deviation="0.0" source="t50" dest="t52"></link>
+      <link type="Objects::AMC::Link" name="t52-->t57" probability="1.0" intensity="28.429" deviation="0.0" source="t52" dest="t57"></link>
+      <link type="Objects::AMC::Link" name="t57-->t60" probability="0.3333" intensity="7.698" deviation="0.0" source="t57" dest="t60"></link>
+      <link type="Objects::AMC::Link" name="t57-->t52" probability="0.6667" intensity="3.000" deviation="0.0" source="t57" dest="t52"></link>
+      <link type="Objects::AMC::Link" name="t60-->t75" probability="0.6000" intensity="12.496" deviation="0.0" source="t60" dest="t75"></link>
+      <link type="Objects::AMC::Link" name="t60-->t62" probability="0.4000" intensity="92.153" deviation="0.0" source="t60" dest="t62"></link>
+      <link type="Objects::AMC::Link" name="t62-->t64" probability="1.0" intensity="40.437" deviation="0.0" source="t62" dest="t64"></link>
+      <link type="Objects::AMC::Link" name="t64-->t71" probability="0.5000" intensity="3.500" deviation="0.0" source="t64" dest="t71"></link>
+      <link type="Objects::AMC::Link" name="t64-->t67" probability="0.5000" intensity="30.817" deviation="0.0" source="t64" dest="t67"></link>
+      <link type="Objects::AMC::Link" name="t67-->t69" probability="1.0" intensity="64.263" deviation="0.0" source="t67" dest="t69"></link>
+      <link type="Objects::AMC::Link" name="t69-->t71" probability="1.0" intensity="3.500" deviation="0.0" source="t69" dest="t71"></link>
+      <link type="Objects::AMC::Link" name="t71-->t73" probability="1.0" intensity="6.166" deviation="0.0" source="t71" dest="t73"></link>
+      <link type="Objects::AMC::Link" name="t73-->t75" probability="1.0" intensity="10.609" deviation="0.0" source="t73" dest="t75"></link>
+      <link type="Objects::AMC::Link" name="t75-->t28" probability="0.8000" intensity="5.000" deviation="0.0" source="t75" dest="t28"></link>
+      <link type="Objects::AMC::Link" name="t75-->t78" probability="0.2000" intensity="3.500" deviation="0.0" source="t75" dest="t78"></link>
+</model>
